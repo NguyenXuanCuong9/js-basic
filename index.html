@@ -1,13 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animations Demo</title>
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <p>Khởi Tạo</p>
+
+  <div class="container">
+    <h1>CSS Animations</h1>
+
+    <div class="row">
+      <div class="box rotate"></div>
+      <pre>
+.box {
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+      </pre>
     </div>
+
+    <div class="row">
+      <div class="box pulse"></div>
+      <pre>
+.box {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,100% { transform: scale(1); }
+  50%     { transform: scale(1.2); }
+}
+      </pre>
+    </div>
+
+    <div class="row">
+      <div class="box slide"></div>
+      <pre>
+.box {
+  animation: slideIn 2s infinite;
+}
+
+@keyframes slideIn {
+  0%   { transform: translateX(-50%); }
+  50%  { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
+      </pre>
+    </div>
+
+    <div class="row">
+      <div class="box fade"></div>
+      <pre>
+.box {
+  animation: fadeIn 2s infinite;
+}
+
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  50%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+      </pre>
+    </div>
+
+    <div class="row">
+      <div class="box bounce"></div>
+      <pre>
+.box {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  40%  { transform: translateY(-20px); }
+  60%  { transform: translateY(-10px); }
+}
+      </pre>
+    </div>
+  </div>
+
 </body>
 </html>

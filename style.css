@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0b1220;
+  color: white;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #3ef1d0;
+  margin-bottom: 40px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 30px;
+  background: #101a30;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.box {
+  width: 100px;
+  height: 60px;
+  background: linear-gradient(135deg, #2df4d3, #00c7ff);
+  border-radius: 10px;
+  margin: auto;
+}
+
+/* ===== ANIMATIONS ===== */
+
+/* Rotate */
+.rotate {
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Pulse */
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.2); }
+}
+
+/* Slide */
+.slide {
+  animation: slideIn 2s ease-in-out infinite;
+}
+
+@keyframes slideIn {
+  0%   { transform: translateX(-40px); }
+  50%  { transform: translateX(0); }
+  100% { transform: translateX(40px); }
+}
+
+/* Fade */
+.fade {
+  animation: fadeIn 2s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  50%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Bounce */
+.bounce {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  40%  { transform: translateY(-20px); }
+  60%  { transform: translateY(-10px); }
+}
